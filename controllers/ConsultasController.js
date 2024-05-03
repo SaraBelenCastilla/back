@@ -69,7 +69,7 @@ exports.getDeleteConsultas = (req,res,next)=>{
   try {
     Consultas.findByIdAndDelete({_id: _id}).then(doc=>{
       console.log('Borrado con éxito: '+doc);
-      res.json({status:'success'});
+      
   });
   } catch (err) {
     console.error('error en el find'+err.stack)
