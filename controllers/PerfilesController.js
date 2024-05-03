@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 
-const Perfiles = mongoose.model('Perfiles',{ Nombre:String,Foto:String })
+const Perfiles = mongoose.model('Perfiles',{ Nombre:String,Src:String })
 
 exports.getAllPerfiles =(req,res,next)=>{
  
@@ -42,7 +42,7 @@ exports.getUpdatePerfiles =(req,res,next)=>{
  
    
     try {
-      Perfiles.updateOne({_id: _id}, {$set: {Nombre:Nombre,Apellidos:Apellidos,Direccion:Direccion} }).then(result=>{
+      Perfiles.updateOne({_id: _id}, {$set: {Nombre:Nombre,Src:Src} }).then(result=>{
         res.json({status:'success'});
     })
     } catch (err) {
