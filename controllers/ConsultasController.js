@@ -21,7 +21,7 @@ exports.getCreateConsultas = (req,res,next)=>{
     const consultas = new Consultas({ Nombre:Nombre,Motivo:Motivo,Telefono:Telefono,Email:Email,Usuario:Usuario });
     consultas.save().then(doc=>{
       console.log('dato insertado correctamente:+doc');
-      res.redirect('http://localhost:5173/Consultas')
+      res.redirect(LINK_CLIENTE+'Consultas')
     })
   } catch (err) {
     console.error('error en el find'+err.stack)
