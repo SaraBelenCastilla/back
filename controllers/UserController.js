@@ -40,7 +40,7 @@ exports.getUser = (req,res)=>{
    const usuario = new Usuarios ({ Usuario :Usuario ,Password :Password });
     usuario.save().then(doc=>{
      console.log('dato insertado correctamente:+doc');
-     res.redirect('http://localhost:5173/login')
+     
    })
   } catch (err) {
     console.error('error en el find:'+err.stack)
